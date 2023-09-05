@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./img/Img1.png" alt="Size Limit CLI" width="738">
+</p>
+
 # Musica_a_la_Carta
 ¿Cómo optimizamos la satisfacción y retención de usuarios mediante recomendaciones musicales personalizadas con base en el estado del ánimo del usuario?
 
