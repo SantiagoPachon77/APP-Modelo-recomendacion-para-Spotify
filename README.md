@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./img/Img1.png" alt="Size Limit CLI" width="738">
+  <img src="./img/Img1.PNG" alt="Size Limit CLI" width="738">
 </p>
 
 # Musica_a_la_Carta
