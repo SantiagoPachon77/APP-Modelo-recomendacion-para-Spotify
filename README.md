@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="./img/Img4.PNG" alt="Size Limit CLI" width="738">
+  <img src="./img/img4.png" alt="Size Limit CLI" width="738">
 </p>
 
 ¿Cómo optimizamos la satisfacción y retención de usuarios mediante recomendaciones musicales personalizadas con base en el estado del ánimo del usuario?
@@ -40,6 +40,16 @@ Características
 17.	release_date: La fecha de lanzamiento de la canción.
 18.	speechiness: Una medida de cuán "hablada" es una canción en lugar de cantada.
 19.	tempo: El tempo de la canción (ritmo o velocidad).
+
+¿Como funciona?
+========
+hemos adoptado un enfoque creativo para evaluar la efectividad de nuestro modelo, basándonos en la satisfacción del usuario con la recomendación recibida. Luego de la primera recomendación generada por el modelo SVD, le preguntamos al usuario: "¿Te gustó la recomendación? (si/no):". En el caso de que la respuesta sea "no", el programa finaliza y registra una precisión del 100%. Esto se debe a que en la primera ejecución, el sistema logró una recomendación exitosa.
+
+Si el usuario responde "no", el sistema continúa y genera una segunda recomendación utilizando el modelo basado en la distancia del coseno. Una vez más, se le pregunta al usuario: "¿Te gustó la recomendación? (si/no):". En este caso, si la respuesta sigue siendo "no", el programa aprende de este error y excluye las canciones que no le gustaron al usuario de la base de datos original. Luego, el proceso de recomendación se reinicia, asegurando que el sistema penalice las recomendaciones erróneas y ajuste su precisión inicial del 100%. Cada vez que el sistema comete un error, se resta un 7% de precisión, garantizando una mejora continua en las recomendaciones.
+<p align="center">
+  <img src="./img/img3.png" alt="Size Limit CLI" width="738">
+</p>
+
 
 Requerimientos
 ============
