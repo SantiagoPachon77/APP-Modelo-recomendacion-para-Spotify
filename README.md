@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="./img/Img4.PNG" alt="Size Limit CLI" width="738">
+  <img src="./img/img4.png" alt="Size Limit CLI" width="738">
 </p>
 
 ¿Cómo optimizamos la satisfacción y retención de usuarios mediante recomendaciones musicales personalizadas con base en el estado del ánimo del usuario?
