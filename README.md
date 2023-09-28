@@ -6,9 +6,26 @@
   <img src="./img/img4.png" alt="Size Limit CLI" width="738">
 </p>
 
+## Tabla de Contenido
+
+- [Introducción](#Introducción)
+    - [Pregunta de negocio](#Pregunta_de_negocio)
+    - [Motivación](#Motivación)
+- [Repositorio](#Repositorio)
+    - [Niveles](#Niveles)
+    - [Ejecución](#Ejecución)
+- [Características](#Características)
+- [¿Como funciona?](#¿Como_funciona?)
+    - [Diagrama de proceso](#Diagrama_de_proceso)
+- [Requerimientos](#Requerimientos)
+- [Artículos](#Artículos)
+
+## Introducción
+### Pregunta de negocio
 ¿Cómo optimizamos la satisfacción y retención de usuarios mediante recomendaciones musicales personalizadas con base en el estado del ánimo del usuario?
 <br>
 <br>
+### Motivación
 La motivación detrás de este proyecto surge de la sobrecarga de opciones musicales en la era digital debido al acceso a un vasto catálogo de música, que a veces puede resultar abrumador para los usuarios. En muchas ocasiones, los usuarios se sienten perdidos entre la multitud de opciones, lo que conduce a una experiencia despersonalizada y, en última instancia, a la pérdida de interés. Además, reconocemos la importancia de la emoción y la conexión en la música, ya que sabemos que la música tiene el poder de influir en nuestras emociones y estados de ánimo. Nuestra meta es aprovechar esta capacidad para crear una experiencia musical que no solo sea placentera, sino que también establezca una conexión emocional profunda entre los usuarios y la música que escuchan.
 
 Los clientes potenciales de este proyecto son los usuarios de servicios de streaming de música que desean compartir su estado de ánimo para recibir recomendaciones más personalizadas. El contexto organizacional donde surge este problema es el ámbito de las empresas que ofrecen este tipo de servicios. Estas plataformas buscan continuamente mejorar su servicio con el fin de satisfacer y retener a la mayor cantidad posible de usuarios.
@@ -19,8 +36,31 @@ Para resolver el problema, utilizaremos un algoritmo híbrido de recomendación 
   <img src="./img/img2.png" alt="Size Limit CLI" width="738">
 </p>
 
-Características
-========
+## Repositorio
+### Niveles
+Contamos con 3 carpetas principales
+- data (Insumos principales .csv)
+- img (Imagenes relacionadas en el documento)
+- scripts (Codigo .ipynb)
+
+### Ejecución
+Puedes ejecutar el codigo desde sitios como (Google Colab, Jupiter Notebook o VSC)
+una vez escojas el ambiente donde vas a desplegar asegurate de usar una version de python superior a la 3.5
+
+para verificar la version puedes ejecutar el siguiente comando:
+
+```bash
+!python --version
+```
+
+una vez tengas la versión nesesaria installa las siguientes dependencias como sigue
+
+```bash
+!pip install -r requirements.txt
+```
+Apartir de acá ya puedes ejecutar el notebook y probar la aplicación
+
+## Características
 1.	valence: Una medida de la positividad de una canción. Valores más altos indican canciones más alegres.
 2.	year: El año de lanzamiento de la canción.
 3.	acousticness: Una medida de cuán acústica es una canción. Valores cercanos a 1 indican alta acústica.
@@ -41,24 +81,22 @@ Características
 18.	speechiness: Una medida de cuán "hablada" es una canción en lugar de cantada.
 19.	tempo: El tempo de la canción (ritmo o velocidad).
 
-¿Como funciona?
-========
+## ¿Como funciona?
 hemos adoptado un enfoque creativo para evaluar la efectividad de nuestro modelo, basándonos en la satisfacción del usuario con la recomendación recibida. Luego de la primera recomendación generada por el modelo SVD, le preguntamos al usuario: "¿Te gustó la recomendación? (si/no):". En el caso de que la respuesta sea "si", el programa finaliza y registra una precisión del 100%. Esto se debe a que en la primera ejecución, el sistema logró una recomendación exitosa.
 
 Si el usuario responde "no", el sistema continúa y genera una segunda recomendación utilizando el modelo basado en la distancia del coseno. Una vez más, se le pregunta al usuario: "¿Te gustó la recomendación? (si/no):". En este caso, si la respuesta sigue siendo "no", el programa aprende de este error y excluye las canciones que no le gustaron al usuario de la base de datos original. Luego, el proceso de recomendación se reinicia, asegurando que el sistema penalice las recomendaciones erróneas y ajuste su precisión inicial del 100%. Cada vez que el sistema comete un error, se resta un 7% de precisión, garantizando una mejora continua en las recomendaciones.
+
+### Diagrama de proceso
 <p align="center">
   <img src="./img/img3.png" alt="Size Limit CLI" width="738">
 </p>
 
-
-Requerimientos
-============
+## Requerimientos
 * Linux or macOS or Windows
 * Bash for Windows (`git bash` should suffice)
 * version > python 3.5
 
-Artículos
-=====
+## Artículos
 * [Song Recommendation System based on Mood Detection using Spotify's Web API](https://doi.org/10.1109/iihc55949.2022.10060806)
 * [Music Recommendation System Using Real Time Parameters](https://doi.org/10.1109/raeeucci57140.2023.10134257)
 * [Music Recommendation System using Hybrid Approach](https://doi.org/10.1109/icears56392.2023.10085059)
