@@ -9,14 +9,14 @@
 ## Tabla de Contenido
 
 - [Introducción](#Introducción)
-    - [Pregunta de negocio](#Pregunta_de_negocio)
+    - [Pregunta de negocio](#Pregunta-de-negocio)
     - [Motivación](#Motivación)
 - [Repositorio](#Repositorio)
     - [Niveles](#Niveles)
     - [Ejecución](#Ejecución)
 - [Características](#Características)
-- [¿Como funciona?](#¿Como_funciona?)
-    - [Diagrama de proceso](#Diagrama_de_proceso)
+- [¿Como funciona?](#¿Como-funciona?)
+    - [Diagrama de proceso](#Diagrama-de-proceso)
 - [Requerimientos](#Requerimientos)
 - [Artículos](#Artículos)
 
